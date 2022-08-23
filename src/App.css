@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #ccddff;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 0 50px 15px 50px;
+  text-align: left;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+li {
+  text-align: left;
+  line-height: 1.6;
+}
+
+.center {
+  text-align: center;
+}
+
+.address-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.light-bold {
+  font-weight: 500;
+}
+
+/* --- Navbar Toggle Begins --- */
+.mobile-menu-icon {
+  display: none;
+}
+
+.nav-list ol,
+ul {
+  padding-left: 0;
+}
+
+.nav-items {
+  margin-bottom: -17px;
+}
+.home-nav:hover,
+.services-nav:hover,
+.products-nav:hover,
+.book-appointment-nav:hover {
+  transition: 0.3s;
+  color: black;
+  transform: rotate(5deg);
+}
+
+@media screen and (max-width: 736px) {
+  .home-nav:hover,
+  .services-nav:hover,
+  .products-nav:hover,
+  .book-appointment-nav:hover {
+    transform: none;
+  }
+
+  .navbar {
+    height: 59px;
+  }
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-expand .navbar-nav {
+    flex-direction: column;
+  }
+
+  .nav-links-mobile {
+    position: absolute;
+    display: block;
+    top: 59px;
+    width: 100%;
+    transition: all 0.5s ease-out;
+    animation: rotateX 400ms ease-in-out forwards;
+    transform-origin: top;
+    height: auto;
+    border: 1px solid grey;
+    height: 168px;
+    border-bottom: 2px solid green;
+  }
+  @keyframes rotateX {
+    0% {
+      opacity: 0;
+      transform: rotateX(180deg);
+    }
+    50% {
+      transform: rotateX(80deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateX(0deg);
+    }
+  }
+  .home,
+  .services,
+  .products,
+  .book-appointment {
+    transition: all 0.5s ease;
+    background-color: #b7ddbd;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+  }
+  .home:hover,
+  .services:hover,
+  .products:hover,
+  .book-appointment:hover {
+    background-color: #ccddff;
+    transition: 0.2s;
+    font-weight: bold;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    padding-bottom: 5px;
+    width: 45px;
+    border: 1px solid grey;
+    outline: none;
+    right: 25px;
+    background-color: #ccddff;
+    border-radius: 10px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.toggleBars {
+  width: 25px;
+}
+
+.toggleClose {
+  width: 25px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* --- Navbar Toggle Ends --- */
